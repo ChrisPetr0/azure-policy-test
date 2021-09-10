@@ -1,0 +1,260 @@
+{
+  "$schema": "createFormUI.schema.json",
+  "view": {
+    "kind": "Form",
+    "properties": {
+      "title": "SHI Deny Region Deployment Policy",
+      "steps": [
+        {
+          "name": "basics",
+          "label": "Subscription Information",
+          "elements": [
+            {
+              "name": "resourceScope",
+              "type": "Microsoft.Common.ResourceScope",
+              "subscription": {
+                "constraints": {
+                  "validations": [
+                    {
+                      "isValid": "[expression for checking]",
+                      "message": "Please select a valid subscription."
+                    },
+                    {
+                      "permission": "<Resource Provider>/<Action>",
+                      "message": "Must have correct permission to complete this step."
+                    }
+                  ]
+                },
+                "resourceProviders": [
+                  "<Resource Provider>"
+                ]
+              },
+              "location": {
+                "label": "The region to deploy the policy.",
+                "toolTip": "Select the region where to deploy the policy"
+              }
+            }
+          ],
+          "description": "**SHI Deny Deployment by Region Policy**"
+        },
+        {
+          "name": "denyRegions",
+          "label": "Select Regions to Deny",
+          "elements": [
+            {
+              "name": "denyRegions",
+              "type": "Microsoft.Common.DropDown",
+              "label": "Regions to Deny Deployments",
+              "toolTip": "The regions that will be denied deployment",
+              "multiselect": true,
+              "selectAll": true,
+              "filter": true,
+              "filterPlaceholder": "Filter items ...",
+              "multiLine": false,
+              "constraints": {
+                "allowedValues": [
+                  {
+                    "label": "(US) West US 3",
+                    "value": "westus3"
+                  },
+                  {
+                    "label": "(US) West US 2",
+                    "value": "westus2"
+                  },
+                  {
+                    "label": "(US) West US",
+                    "value": "westus"
+                  },
+                  {
+                    "label": "(US) West Central US",
+                    "value": "westcentralus"
+                  },
+                  {
+                    "label": "(US) South Central US",
+                    "value": "southcentralus"
+                  },
+                  {
+                    "label": "(US) North Central US",
+                    "value": "northcentralus"
+                  },
+                  {
+                    "label": "(US) East US 2 EUAP",
+                    "value": "eastus2euap"
+                  },
+                  {
+                    "label": "(US) East US 2",
+                    "value": "eastus2"
+                  },
+                  {
+                    "label": "(US) East US",
+                    "value": "eastus"
+                  },
+                  {
+                    "label": "(US) Central US EUAP",
+                    "value": "centraluseuap"
+                  },
+                  {
+                    "label": "(US) Central US",
+                    "value": "centralus"
+                  },
+                  {
+                    "label": "(South America) Brazil Southeast",
+                    "value": "brazilsoutheast"
+                  },
+                  {
+                    "label": "(South America) Brazil South",
+                    "value": "brazilsouth"
+                  },
+                  {
+                    "label": "(Middle East) UAE North",
+                    "value": "uaenorth"
+                  },
+                  {
+                    "label": "(Middle East) UAE Central",
+                    "value": "uaecentral"
+                  },
+                  {
+                    "label": "(Europe) West Europe",
+                    "value": "westeurope"
+                  },
+                  {
+                    "label": "(Europe) UK West",
+                    "value": "ukwest"
+                  },
+                  {
+                    "label": "(Europe) UK South",
+                    "value": "uksouth"
+                  },
+                  {
+                    "label": "(Europe) Switzerland West",
+                    "value": "switzerlandwest"
+                  },
+                  {
+                    "label": "(Europe) Switzerland North",
+                    "value": "switzerlandnorth"
+                  },
+                  {
+                    "label": "(Europe) Sweden Central",
+                    "value": "swedencentral"
+                  },
+                  {
+                    "label": "(Europe) Norway West",
+                    "value": "norwaywest"
+                  },
+                  {
+                    "label": "(Europe) Norway East",
+                    "value": "norwayeast"
+                  },
+                  {
+                    "label": "(Europe) North Europe",
+                    "value": "northeurope"
+                  },
+                  {
+                    "label": "(Europe) Germany West Central",
+                    "value": "germanywestcentral"
+                  },
+                  {
+                    "label": "(Europe) Germany North",
+                    "value": "germanynorth"
+                  },
+                  {
+                    "label": "(Europe) France South",
+                    "value": "francesouth"
+                  },
+                  {
+                    "label": "(Europe) France Central",
+                    "value": "francecentral"
+                  },
+                  {
+                    "label": "(Canada) Canada East",
+                    "value": "canadaeast"
+                  },
+                  {
+                    "label": "(Canada) Canada Central",
+                    "value": "canadacentral"
+                  },
+                  {
+                    "label": "(Asia Pacific) West India",
+                    "value": "westindia"
+                  },
+                  {
+                    "label": "(Asia Pacific) Southeast Asia",
+                    "value": "southeastasia"
+                  },
+                  {
+                    "label": "(Asia Pacific) South India",
+                    "value": "southindia"
+                  },
+                  {
+                    "label": "(Asia Pacific) Korea South",
+                    "value": "koreasouth"
+                  },
+                  {
+                    "label": "(Asia Pacific) Korea Central",
+                    "value": "koreacentral"
+                  },
+                  {
+                    "label": "(Asia Pacific) Jio India West",
+                    "value": "jioindiawest"
+                  },
+                  {
+                    "label": "(Asia Pacific) Jio India Central",
+                    "value": "jioindiacentral"
+                  },
+                  {
+                    "label": "(Asia Pacific) Japan West",
+                    "value": "japanwest"
+                  },
+                  {
+                    "label": "(Asia Pacific) Japan East",
+                    "value": "japaneast"
+                  },
+                  {
+                    "label": "(Asia Pacific) East Asia",
+                    "value": "eastasia"
+                  },
+                  {
+                    "label": "(Asia Pacific) Central India",
+                    "value": "centralindia"
+                  },
+                  {
+                    "label": "(Asia Pacific) Australia Southeast",
+                    "value": "australiasoutheast"
+                  },
+                  {
+                    "label": "(Asia Pacific) Australia East",
+                    "value": "australiaeast"
+                  },
+                  {
+                    "label": "(Asia Pacific) Australia Central 2",
+                    "value": "australiacentral2"
+                  },
+                  {
+                    "label": "(Asia Pacific) Australia Central",
+                    "value": "australiacentral"
+                  },
+                  {
+                    "label": "(Africa) South Africa West",
+                    "value": "southafricawest"
+                  },
+                  {
+                    "label": "(Africa) South Africa North",
+                    "value": "southafricanorth"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "outputs": {
+      "parameters": {
+        "denyRegions": "[steps('denyRegions').denyRegions]"
+      },
+      "kind": "Subscription",
+      "location": "[steps('basics').resourceScope.location.name]",
+      "subscriptionId": "[steps('basics').resourceScope.subscription.id]"
+    }
+  }
+}
