@@ -3,11 +3,11 @@
   "view": {
     "kind": "Form",
     "properties": {
-      "title": "SHI Azure Deny Region Deployment Policy",
+      "title": "SHI Deny Region Deployment Policy",
       "steps": [
         {
           "name": "basics",
-          "label": "Basics",
+          "label": "Subscription Information",
           "elements": [
             {
               "name": "resourceScope",
@@ -30,8 +30,8 @@
                 ]
               },
               "location": {
-                "label": "Location of this deployment.",
-                "toolTip": "Origin of deployment"
+                "label": "The region to deploy the policy.",
+                "toolTip": "Select the region where to deploy the policy"
               }
             }
           ],
@@ -39,13 +39,12 @@
         },
         {
           "name": "denyRegions",
-          "label": "Policy - Deny Region Deployments",
+          "label": "Select Regions to Deny",
           "elements": [
             {
               "name": "denyRegions",
               "type": "Microsoft.Common.DropDown",
-              "label": "Deny Region Deployments",
-              "placeholder": "Select all regions to deny deployment...",
+              "label": "Regions to Deny Deployments",
               "toolTip": "The regions that will be denied deployment",
               "multiselect": true,
               "selectAll": true,
