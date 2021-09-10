@@ -29,17 +29,6 @@
                   "<Resource Provider>"
                 ]
               },
-              "resourceGroup": {
-                "constraints": {
-                  "validations": [
-                    {
-                      "isValid": "[expression for checking]",
-                      "message": "Please select a valid resource group."
-                    }
-                  ]
-                },
-                "allowExisting": true
-              },
               "location": {
                 "label": "Location of this deployment.",
                 "toolTip": "Origin of deployment"
