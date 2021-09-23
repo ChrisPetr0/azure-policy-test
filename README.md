@@ -5,3 +5,6 @@
 
 
 [![Deploy to Azure deny_regions](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FChrisPetr0%2Fazure-policy-test%2Fmaster%2Fdeny_regions%2Fazure_deploy.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FChrisPetr0%2Fazure-policy-test%2Fmaster%2Fdeny_regions%2Fcreate_ui_definition.json)
+
+
+[![Deploy to Azure policyset](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FChrisPetr0%2Fazure_exports%2Fmaster%2Fprogrammatic_policy_set%2Fpolicy_set.json)

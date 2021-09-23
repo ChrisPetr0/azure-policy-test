@@ -1,0 +1,3798 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "listOfResourceTypes_7f89b1eb-583c-429a-8828-af049802c1d9": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": null,
+        "displayName": "Resource Types",
+        "strongType": "resourceTypes"
+      },
+      "type": "Array"
+    },
+    "effect_0fc55270-f8bf-4feb-b7b8-5e7e7eacc6a6": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_1f68a601-6e6d-4e42-babf-3f643a047ea2": {
+      "allowedValues": [
+        "audit",
+        "deny",
+        "disabled"
+      ],
+      "defaultValue": "audit",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The effect determines what happens when the policy rule is evaluated to match",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "DcrResourceId_2ea82cdd-f2e8-4500-af75-67a2e084ca74": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Resource Id of the Data Collection Rule to be applied on the virtual machines in scope.",
+        "displayName": "Data Collection Rule Resource Id",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_2ea82cdd-f2e8-4500-af75-67a2e084ca74": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy.",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "listOfLinuxImageIdToInclude_2ea82cdd-f2e8-4500-af75-67a2e084ca74": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example values: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Linux OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "DcrResourceId_eab1f514-22e3-42e3-9a1f-e1dc9199355c": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Resource Id of the Data Collection Rule to be applied on the virtual machines in scope.",
+        "displayName": "Data Collection Rule Resource Id",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_eab1f514-22e3-42e3-9a1f-e1dc9199355c": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy.",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "listOfWindowsImageIdToInclude_eab1f514-22e3-42e3-9a1f-e1dc9199355c": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example values: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Windows OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "effect_a4034bc6-ae50-406d-bf76-50f4ee5a7811": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy.",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "listOfLinuxImageIdToInclude_a4034bc6-ae50-406d-bf76-50f4ee5a7811": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example values: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Linux OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "effect_ca817e41-e85a-4783-bc7f-dc532d36235e": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy.",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "listOfWindowsImageIdToInclude_ca817e41-e85a-4783-bc7f-dc532d36235e": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example values: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Windows OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "listOfImageIdToInclude_765266ab-e40e-4c61-bcb2-5a5275d0b7c0": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of VM images that have supported Linux OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "listOfImageIdToInclude_4da21710-ce6f-4e06-8cdb-5cc4c93ffbee": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of VM images that have supported Linux OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "effect_3be22e3b-d919-47aa-805e-8985dbeb0ad9": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "listOfImageIdToInclude_3be22e3b-d919-47aa-805e-8985dbeb0ad9": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Windows OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "effect_1c210e94-a481-4beb-95fa-1571b434fb04": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "listOfImageIdToInclude_1c210e94-a481-4beb-95fa-1571b434fb04": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Windows OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "listOfImageIdToInclude_5ee9e9ed-0b42-41b7-8c9c-3cfb2fbe2069": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of VM images that have supported Linux OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "logAnalytics_5ee9e9ed-0b42-41b7-8c9c-3cfb2fbe2069": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "listOfImageIdToInclude_053d3325-282c-4e5c-b944-24faffd30d77": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of VM images that have supported Linux OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "logAnalytics_053d3325-282c-4e5c-b944-24faffd30d77": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "effect_3c1b3629-c8f8-4bf6-862c-037cb9094038": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "listOfImageIdToInclude_3c1b3629-c8f8-4bf6-862c-037cb9094038": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Windows OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "logAnalytics_3c1b3629-c8f8-4bf6-862c-037cb9094038": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Log Analytics workspace is used to receive performance data. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "effect_0868462e-646c-4fe3-9ced-a733534b6a2c": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "listOfImageIdToInclude_0868462e-646c-4fe3-9ced-a733534b6a2c": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example values: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Windows OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "logAnalytics_0868462e-646c-4fe3-9ced-a733534b6a2c": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Log Analytics workspace is used to receive performance data. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "automationAccountName_8e3e61b3-0b32-22d5-4edf-55f87fdb5955": {
+      "allowedValues": null,
+      "defaultValue": "CentralAutomationAccount",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Provide name for automation account",
+        "displayName": "automationAccountName",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "automationRegion_8e3e61b3-0b32-22d5-4edf-55f87fdb5955": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Select Azure region for automation account",
+        "displayName": "automationRegion",
+        "strongType": "location"
+      },
+      "type": "String"
+    },
+    "dataRetention_8e3e61b3-0b32-22d5-4edf-55f87fdb5955": {
+      "allowedValues": null,
+      "defaultValue": "30",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enter the retention period in workspace, can be between 7 to 730 days. Billing is per 30 days at the minimum even when retention is shorter",
+        "displayName": "dataRetention",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_8e3e61b3-0b32-22d5-4edf-55f87fdb5955": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Select DeployIfNotExists to deploy central Log Analytics workspace, Audit or Disable to disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "rgName_8e3e61b3-0b32-22d5-4edf-55f87fdb5955": {
+      "allowedValues": null,
+      "defaultValue": "CentralRG",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Provide name for resource group",
+        "displayName": "rgName",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "sku_8e3e61b3-0b32-22d5-4edf-55f87fdb5955": {
+      "allowedValues": [
+        "pergb2018",
+        "Free",
+        "Standalone",
+        "PerNode",
+        "Standard",
+        "Premium"
+      ],
+      "defaultValue": "pergb2018",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Select pricing tier. Legacy tiers (Free, Standalone, PerNode, Standard or Premium) are not available to all customers",
+        "displayName": "sku",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "workspaceName_8e3e61b3-0b32-22d5-4edf-55f87fdb5955": {
+      "allowedValues": null,
+      "defaultValue": "CentralWorkspace",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Provide name for log analytics workspace",
+        "displayName": "workspaceName",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "workspaceRegion_8e3e61b3-0b32-22d5-4edf-55f87fdb5955": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enter Azure region for Log Analytics workspace",
+        "displayName": "workspaceRegion",
+        "strongType": "location"
+      },
+      "type": "String"
+    },
+    "effect_2465583e-4e78-4c15-b6be-a36cbc7c8b0f": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_2465583e-4e78-4c15-b6be-a36cbc7c8b0f": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Primary Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_2465583e-4e78-4c15-b6be-a36cbc7c8b0f": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_b3884c81-31aa-473d-a9bb-9466fe0ec2a0": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_b3884c81-31aa-473d-a9bb-9466fe0ec2a0": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Specify the Log Analytics workspace to send log to. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_b3884c81-31aa-473d-a9bb-9466fe0ec2a0": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_b3884c81-31aa-473d-a9bb-9466fe0ec2a0": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_b3884c81-31aa-473d-a9bb-9466fe0ec2a0": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_logAnalytics",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_db51110f-0865-4a6e-b274-e2e07a5b2cd7": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "eventHubLocation_db51110f-0865-4a6e-b274-e2e07a5b2cd7": {
+      "allowedValues": null,
+      "defaultValue": "",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The location the Event Hub resides in. Only Batch Accounts in this location will be linked to this Event Hub.",
+        "displayName": "Event Hub Location",
+        "strongType": "location"
+      },
+      "type": "String"
+    },
+    "eventHubRuleId_db51110f-0865-4a6e-b274-e2e07a5b2cd7": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "The Event Hub authorization rule Id for Azure Diagnostics. The authorization rule needs to be at Event Hub namespace level. e.g. /subscriptions/{subscription Id}/resourceGroups/{resource group}/providers/Microsoft.EventHub/namespaces/{Event Hub namespace}/authorizationrules/{authorization rule}",
+        "displayName": "Event Hub Authorization Rule Id",
+        "strongType": "Microsoft.EventHub/Namespaces/AuthorizationRules"
+      },
+      "type": "String"
+    },
+    "logsEnabled_db51110f-0865-4a6e-b274-e2e07a5b2cd7": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Event Hub  - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_db51110f-0865-4a6e-b274-e2e07a5b2cd7": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Event Hub - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_db51110f-0865-4a6e-b274-e2e07a5b2cd7": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_eventHub",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_c84e5349-db6d-4769-805e-e14037dab9b5": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_c84e5349-db6d-4769-805e-e14037dab9b5": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_c84e5349-db6d-4769-805e-e14037dab9b5": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_c84e5349-db6d-4769-805e-e14037dab9b5": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_c84e5349-db6d-4769-805e-e14037dab9b5": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_logAnalytics",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_4daddf25-4823-43d4-88eb-2419eb6dcc08": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "eventHubLocation_4daddf25-4823-43d4-88eb-2419eb6dcc08": {
+      "allowedValues": null,
+      "defaultValue": "",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The location the Event Hub resides in. Only Data Lake Analytics in this location will be linked to this Event Hub.",
+        "displayName": "Event Hub Location",
+        "strongType": "location"
+      },
+      "type": "String"
+    },
+    "eventHubRuleId_4daddf25-4823-43d4-88eb-2419eb6dcc08": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "The Event Hub authorization rule Id for Azure Diagnostics. The authorization rule needs to be at Event Hub namespace level. e.g. /subscriptions/{subscription Id}/resourceGroups/{resource group}/providers/Microsoft.EventHub/namespaces/{Event Hub namespace}/authorizationrules/{authorization rule}",
+        "displayName": "Event Hub Authorization Rule Id",
+        "strongType": "Microsoft.EventHub/Namespaces/AuthorizationRules"
+      },
+      "type": "String"
+    },
+    "logsEnabled_4daddf25-4823-43d4-88eb-2419eb6dcc08": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Event Hub  - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_4daddf25-4823-43d4-88eb-2419eb6dcc08": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Event Hub - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_4daddf25-4823-43d4-88eb-2419eb6dcc08": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_eventHub",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_logAnalytics",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "eventHubLocation_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d": {
+      "allowedValues": null,
+      "defaultValue": "",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The location the Event Hub resides in. Only Data Lake Storage in this location will be linked to this Event Hub.",
+        "displayName": "Event Hub Location",
+        "strongType": "location"
+      },
+      "type": "String"
+    },
+    "eventHubRuleId_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "The Event Hub authorization rule Id for Azure Diagnostics. The authorization rule needs to be at Event Hub namespace level. e.g. /subscriptions/{subscription Id}/resourceGroups/{resource group}/providers/Microsoft.EventHub/namespaces/{Event Hub namespace}/authorizationrules/{authorization rule}",
+        "displayName": "Event Hub Authorization Rule Id",
+        "strongType": "Microsoft.EventHub/Namespaces/AuthorizationRules"
+      },
+      "type": "String"
+    },
+    "logsEnabled_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Event Hub  - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Event Hub - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_eventHub",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_25763a0a-5783-4f14-969e-79d4933eb74b": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_25763a0a-5783-4f14-969e-79d4933eb74b": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_25763a0a-5783-4f14-969e-79d4933eb74b": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_25763a0a-5783-4f14-969e-79d4933eb74b": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_25763a0a-5783-4f14-969e-79d4933eb74b": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_logAnalytics",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "eventHubLocation_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f": {
+      "allowedValues": null,
+      "defaultValue": "",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The location the Event Hub that will get diagnostic data resides in. Only source Event Hubs in this location will be linked to this destination Event Hub.",
+        "displayName": "Event Hub Destination Location",
+        "strongType": "location"
+      },
+      "type": "String"
+    },
+    "eventHubRuleId_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "The Event Hub authorization rule Id for Azure Diagnostics. The authorization rule needs to be at Event Hub namespace level. e.g. /subscriptions/{subscription Id}/resourceGroups/{resource group}/providers/Microsoft.EventHub/namespaces/{Event Hub namespace}/authorizationrules/{authorization rule}",
+        "displayName": "Event Hub Authorization Rule Id",
+        "strongType": "Microsoft.EventHub/Namespaces/AuthorizationRules"
+      },
+      "type": "String"
+    },
+    "logsEnabled_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Event Hub  - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Event Hub - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_eventHub",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_1f6e93e8-6b31-41b1-83f6-36e449a42579": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_1f6e93e8-6b31-41b1-83f6-36e449a42579": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_1f6e93e8-6b31-41b1-83f6-36e449a42579": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_1f6e93e8-6b31-41b1-83f6-36e449a42579": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_1f6e93e8-6b31-41b1-83f6-36e449a42579": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_logAnalytics",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_bef3f64c-5290-43b7-85b0-9b254eef4c47": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_bef3f64c-5290-43b7-85b0-9b254eef4c47": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_bef3f64c-5290-43b7-85b0-9b254eef4c47": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_bef3f64c-5290-43b7-85b0-9b254eef4c47": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_bef3f64c-5290-43b7-85b0-9b254eef4c47": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_logAnalytics",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_a1dae6c7-13f3-48ea-a149-ff8442661f60": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "eventHubLocation_a1dae6c7-13f3-48ea-a149-ff8442661f60": {
+      "allowedValues": null,
+      "defaultValue": "",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The location the Event Hub resides in. Only Logic Apps in this location will be linked to this Event Hub.",
+        "displayName": "Event Hub Location",
+        "strongType": "location"
+      },
+      "type": "String"
+    },
+    "eventHubRuleId_a1dae6c7-13f3-48ea-a149-ff8442661f60": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "The Event Hub authorization rule Id for Azure Diagnostics. The authorization rule needs to be at Event Hub namespace level. e.g. /subscriptions/{subscription Id}/resourceGroups/{resource group}/providers/Microsoft.EventHub/namespaces/{Event Hub namespace}/authorizationrules/{authorization rule}",
+        "displayName": "Event Hub Authorization Rule Id",
+        "strongType": "Microsoft.EventHub/Namespaces/AuthorizationRules"
+      },
+      "type": "String"
+    },
+    "logsEnabled_a1dae6c7-13f3-48ea-a149-ff8442661f60": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Event Hub  - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_a1dae6c7-13f3-48ea-a149-ff8442661f60": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Event Hub - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_a1dae6c7-13f3-48ea-a149-ff8442661f60": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_eventHub",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_b889a06c-ec72-4b03-910a-cb169ee18721": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_b889a06c-ec72-4b03-910a-cb169ee18721": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_b889a06c-ec72-4b03-910a-cb169ee18721": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_b889a06c-ec72-4b03-910a-cb169ee18721": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_b889a06c-ec72-4b03-910a-cb169ee18721": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_logAnalytics",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_3d5da587-71bd-41f5-ac95-dd3330c2d58d": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "eventHubLocation_3d5da587-71bd-41f5-ac95-dd3330c2d58d": {
+      "allowedValues": null,
+      "defaultValue": "",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The location the Event Hub resides in. Only Search Services in this location will be linked to this Event Hub.",
+        "displayName": "Event Hub Location",
+        "strongType": "location"
+      },
+      "type": "String"
+    },
+    "eventHubRuleId_3d5da587-71bd-41f5-ac95-dd3330c2d58d": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "The Event Hub authorization rule Id for Azure Diagnostics. The authorization rule needs to be at Event Hub namespace level. e.g. /subscriptions/{subscription Id}/resourceGroups/{resource group}/providers/Microsoft.EventHub/namespaces/{Event Hub namespace}/authorizationrules/{authorization rule}",
+        "displayName": "Event Hub Authorization Rule Id",
+        "strongType": "Microsoft.EventHub/Namespaces/AuthorizationRules"
+      },
+      "type": "String"
+    },
+    "logsEnabled_3d5da587-71bd-41f5-ac95-dd3330c2d58d": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Event Hub  - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_3d5da587-71bd-41f5-ac95-dd3330c2d58d": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Event Hub - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_3d5da587-71bd-41f5-ac95-dd3330c2d58d": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_eventHub",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_08ba64b8-738f-4918-9686-730d2ed79c7d": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_08ba64b8-738f-4918-9686-730d2ed79c7d": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_08ba64b8-738f-4918-9686-730d2ed79c7d": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_08ba64b8-738f-4918-9686-730d2ed79c7d": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_08ba64b8-738f-4918-9686-730d2ed79c7d": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_logAnalytics",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_6b51af03-9277-49a9-a3f8-1c69c9ff7403": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "eventHubLocation_6b51af03-9277-49a9-a3f8-1c69c9ff7403": {
+      "allowedValues": null,
+      "defaultValue": "",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The location the Event Hub resides in. Only Service Bus in this location will be linked to this Event Hub.",
+        "displayName": "Event Hub Location",
+        "strongType": "location"
+      },
+      "type": "String"
+    },
+    "eventHubRuleId_6b51af03-9277-49a9-a3f8-1c69c9ff7403": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "The Event Hub authorization rule Id for Azure Diagnostics. The authorization rule needs to be at Event Hub namespace level. e.g. /subscriptions/{subscription Id}/resourceGroups/{resource group}/providers/Microsoft.EventHub/namespaces/{Event Hub namespace}/authorizationrules/{authorization rule}",
+        "displayName": "Event Hub Authorization Rule Id",
+        "strongType": "Microsoft.EventHub/Namespaces/AuthorizationRules"
+      },
+      "type": "String"
+    },
+    "logsEnabled_6b51af03-9277-49a9-a3f8-1c69c9ff7403": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Event Hub  - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_6b51af03-9277-49a9-a3f8-1c69c9ff7403": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Event Hub - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_6b51af03-9277-49a9-a3f8-1c69c9ff7403": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_eventHub",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_04d53d87-841c-4f23-8a5b-21564380b55e": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_04d53d87-841c-4f23-8a5b-21564380b55e": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_04d53d87-841c-4f23-8a5b-21564380b55e": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_04d53d87-841c-4f23-8a5b-21564380b55e": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_04d53d87-841c-4f23-8a5b-21564380b55e": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_logAnalytics",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_edf3780c-3d70-40fe-b17e-ab72013dafca": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "eventHubLocation_edf3780c-3d70-40fe-b17e-ab72013dafca": {
+      "allowedValues": null,
+      "defaultValue": "",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The location the Event Hub resides in. Only Stream Analytics in this location will be linked to this Event Hub.",
+        "displayName": "Event Hub Location",
+        "strongType": "location"
+      },
+      "type": "String"
+    },
+    "eventHubRuleId_edf3780c-3d70-40fe-b17e-ab72013dafca": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "The Event Hub authorization rule Id for Azure Diagnostics. The authorization rule needs to be at Event Hub namespace level. e.g. /subscriptions/{subscription Id}/resourceGroups/{resource group}/providers/Microsoft.EventHub/namespaces/{Event Hub namespace}/authorizationrules/{authorization rule}",
+        "displayName": "Event Hub Authorization Rule Id",
+        "strongType": "Microsoft.EventHub/Namespaces/AuthorizationRules"
+      },
+      "type": "String"
+    },
+    "logsEnabled_edf3780c-3d70-40fe-b17e-ab72013dafca": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Event Hub  - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_edf3780c-3d70-40fe-b17e-ab72013dafca": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Event Hub - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_edf3780c-3d70-40fe-b17e-ab72013dafca": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_eventHub",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_237e0f7e-b0e8-4ec4-ad46-8c12cb66d673": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_237e0f7e-b0e8-4ec4-ad46-8c12cb66d673": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_237e0f7e-b0e8-4ec4-ad46-8c12cb66d673": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable logs stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_237e0f7e-b0e8-4ec4-ad46-8c12cb66d673": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Whether to enable metrics stream to the Log Analytics workspace - True or False",
+        "displayName": "Enable metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_237e0f7e-b0e8-4ec4-ad46-8c12cb66d673": {
+      "allowedValues": null,
+      "defaultValue": "setbypolicy_logAnalytics",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The diagnostic settings profile name",
+        "displayName": "Profile name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_dddfa1af-dcd6-42f4-b5b0-e1db01e0b405": {
+      "allowedValues": [
+        "Modify",
+        "Disabled"
+      ],
+      "defaultValue": "Modify",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_752154a7-1e0f-45c6-a880-ac75a7e4f648": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_752154a7-1e0f-45c6-a880-ac75a7e4f648": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "The target Log Analytics workspace for the diagnostic settings",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "logsEnabled_752154a7-1e0f-45c6-a880-ac75a7e4f648": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "True",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable Logs - True or False",
+        "displayName": "Enable Logs",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "metricsEnabled_752154a7-1e0f-45c6-a880-ac75a7e4f648": {
+      "allowedValues": [
+        "True",
+        "False"
+      ],
+      "defaultValue": "False",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable Metrics - True or False",
+        "displayName": "Enable Metrics",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "profileName_752154a7-1e0f-45c6-a880-ac75a7e4f648": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Profile name for the Azure diagnostic settings resource",
+        "displayName": "Diagnostic setting name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_deacecc0-9f84-44d2-bb82-46f32d766d43": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_91cb9edd-cd92-4d2f-b2f2-bdd8d065a3d4": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_9d2b61b4-1d14-4a63-be30-d4498e7ad2cf": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_9d2b61b4-1d14-4a63-be30-d4498e7ad2cf": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Specify the Log Analytics workspace the agent should be connected to. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "effect_69af7d4a-7b18-4044-93a9-2651498ef203": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalytics_69af7d4a-7b18-4044-93a9-2651498ef203": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "Specify the Log Analytics workspace the agent should be connected to. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+        "displayName": "Log Analytics workspace",
+        "strongType": "omsWorkspace"
+      },
+      "type": "String"
+    },
+    "effect_199d5677-e4d9-4264-9465-efe1839c06bd": {
+      "allowedValues": [
+        "Deny",
+        "Audit",
+        "Disabled"
+      ],
+      "defaultValue": "Audit",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_e15effd4-2278-4c65-a0da-4d6f6d1890e2": {
+      "allowedValues": [
+        "Deny",
+        "Audit",
+        "Disabled"
+      ],
+      "defaultValue": "Audit",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_94c1f94d-33b0-4062-bd04-1cdc3e7eece2": {
+      "allowedValues": [
+        "Audit",
+        "Disabled",
+        "Deny"
+      ],
+      "defaultValue": "Audit",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The effect determines what happens when the policy rule is evaluated to match",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_1bc02227-0cb6-4e11-8f53-eb0b22eab7e8": {
+      "allowedValues": [
+        "audit",
+        "deny",
+        "disabled"
+      ],
+      "defaultValue": "audit",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The effect determines what happens when the policy rule is evaluated to match",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_d3ba9c42-9dd5-441a-957c-274031c750c0": {
+      "allowedValues": [
+        "Modify",
+        "Disabled"
+      ],
+      "defaultValue": "Modify",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The effect determines what happens when the policy rule is evaluated to match",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_6c53d030-cc64-46f0-906d-2bc061cd1334": {
+      "allowedValues": [
+        "audit",
+        "deny",
+        "disabled"
+      ],
+      "defaultValue": "audit",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The effect determines what happens when the policy rule is evaluated to match",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_fa298e57-9444-42ba-bf04-86e8470e32c7": {
+      "allowedValues": [
+        "audit",
+        "deny",
+        "disabled"
+      ],
+      "defaultValue": "audit",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The effect determines what happens when the policy rule is evaluated to match",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_d550e854-df1a-4de9-bf44-cd894b39a95e": {
+      "allowedValues": [
+        "audit",
+        "deny",
+        "disabled"
+      ],
+      "defaultValue": "audit",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The effect determines what happens when the policy rule is evaluated to match",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_e8185402-357b-4768-8058-f620bc0ae6b5": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "privateEndpointSubnetId_e8185402-357b-4768-8058-f620bc0ae6b5": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "A subnet with private endpoint network policies disabled.",
+        "displayName": "Private endpoint subnet ID",
+        "strongType": "Microsoft.Network/virtualNetworks/subnets"
+      },
+      "type": "String"
+    },
+    "effect_5c3bc7b8-a64c-4e08-a9cd-7ff0f31e1138": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "listOfImageIdToInclude_linux_5c3bc7b8-a64c-4e08-a9cd-7ff0f31e1138": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Linux OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "listOfImageIdToInclude_windows_5c3bc7b8-a64c-4e08-a9cd-7ff0f31e1138": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Windows OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "effect_e2dd799a-a932-4e9d-ac17-d473bc3c6c10": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "listOfImageIdToInclude_linux_e2dd799a-a932-4e9d-ac17-d473bc3c6c10": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Linux OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "listOfImageIdToInclude_windows_e2dd799a-a932-4e9d-ac17-d473bc3c6c10": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Windows OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "effect_11ac78e3-31bc-4f0c-8434-37ab963cea07": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "listOfImageIdToInclude_linux_11ac78e3-31bc-4f0c-8434-37ab963cea07": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Linux OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "listOfImageIdToInclude_windows_11ac78e3-31bc-4f0c-8434-37ab963cea07": {
+      "allowedValues": null,
+      "defaultValue": [],
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Example value: '/subscriptions/<subscriptionId>/resourceGroups/YourResourceGroup/providers/Microsoft.Compute/images/ContosoStdImage'",
+        "displayName": "Optional: List of virtual machine images that have supported Windows OS to add to scope",
+        "strongType": null
+      },
+      "type": "Array"
+    },
+    "effect_f47b5582-33ec-4c5c-87c0-b010a6b2e917": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "logAnalyticsWorkspaceId_f47b5582-33ec-4c5c-87c0-b010a6b2e917": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "This is the Id (GUID) of the Log Analytics Workspace that the virtual machines should be configured for.",
+        "displayName": "Log Analytics Workspace Id that virtual machines should be configured for",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_efbde977-ba53-4479-b8e9-10b957924fbf": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_a70ca396-0a34-413a-88e1-b956c1e683be": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_fbb99e8e-e444-4da0-9ff1-75c92f5a85b2": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_b954148f-4c11-4c38-8221-be76711e194a": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "operationName_b954148f-4c11-4c38-8221-be76711e194a": {
+      "allowedValues": [
+        "Microsoft.Sql/servers/firewallRules/write",
+        "Microsoft.Sql/servers/firewallRules/delete",
+        "Microsoft.Network/networkSecurityGroups/write",
+        "Microsoft.Network/networkSecurityGroups/delete",
+        "Microsoft.ClassicNetwork/networkSecurityGroups/write",
+        "Microsoft.ClassicNetwork/networkSecurityGroups/delete",
+        "Microsoft.Network/networkSecurityGroups/securityRules/write",
+        "Microsoft.Network/networkSecurityGroups/securityRules/delete",
+        "Microsoft.ClassicNetwork/networkSecurityGroups/securityRules/write",
+        "Microsoft.ClassicNetwork/networkSecurityGroups/securityRules/delete"
+      ],
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Administrative Operation name for which activity log alert should be configured",
+        "displayName": "Operation Name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_c5447c04-a4d7-4ba8-a263-c9ee321a6858": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "operationName_c5447c04-a4d7-4ba8-a263-c9ee321a6858": {
+      "allowedValues": [
+        "Microsoft.Authorization/policyAssignments/write",
+        "Microsoft.Authorization/policyAssignments/delete"
+      ],
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Policy Operation name for which activity log alert should exist",
+        "displayName": "Operation Name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_3b980d31-7904-4bb7-8575-5665739a8052": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "operationName_3b980d31-7904-4bb7-8575-5665739a8052": {
+      "allowedValues": [
+        "Microsoft.Security/policies/write",
+        "Microsoft.Security/securitySolutions/write",
+        "Microsoft.Security/securitySolutions/delete"
+      ],
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Security Operation name for which activity log alert should exist",
+        "displayName": "Operation Name",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_b02aacc0-b073-424e-8298-42b22829ee0a": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_41388f1c-2db0-4c25-95b2-35d7f5ccbfa9": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "rgName_c9c29499-c1d1-4195-99bd-2ec9e3a9dc89": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The resource group that the storage account will be created in. This resource group must already exist.",
+        "displayName": "Resource Group Name for Storage Account (must exist)",
+        "strongType": "ExistingResourceGroups"
+      },
+      "type": "String"
+    },
+    "storagePrefix_c9c29499-c1d1-4195-99bd-2ec9e3a9dc89": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "This prefix will be combined with the network security group location to form the created storage account name.",
+        "displayName": "Storage Account Prefix for Regional Storage Account",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_7796937f-307b-4598-941c-67d3a05ebfe7": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_1a4e592a-6a6e-44a5-9814-e36264ca96e7": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_3e596b57-105f-48a6-be97-03e9243bad6e": {
+      "allowedValues": [
+        "AuditIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "AuditIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_ea0dfaed-95fb-448c-934e-d6e713ce393d": {
+      "allowedValues": [
+        "audit",
+        "deny",
+        "disabled"
+      ],
+      "defaultValue": "audit",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "The effect determines what happens when the policy rule is evaluated to match",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_0c4bd2e8-8872-4f37-a654-03f6f38ddc76": {
+      "allowedValues": [
+        "Deny",
+        "Audit",
+        "Disabled"
+      ],
+      "defaultValue": "Audit",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "effect_437914ee-c176-4fff-8986-7e05eb971365": {
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Enable or disable the execution of the policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    },
+    "privateDnsZoneId1_437914ee-c176-4fff-8986-7e05eb971365": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "One of the five private DNS zone IDs required for Microsoft.Insights/privateLinkScopes to resolve a private DNS Zone to your Azure Monitor Private Link scope.",
+        "displayName": "Private DNS Zone for global endpoints used by Azure Monitor",
+        "strongType": "Microsoft.Network/privateDnsZones"
+      },
+      "type": "String"
+    },
+    "privateDnsZoneId2_437914ee-c176-4fff-8986-7e05eb971365": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "One of the five private DNS zone IDs required for Microsoft.Insights/privateLinkScopes to resolve a private DNS Zone to your Azure Monitor Private Link scope.",
+        "displayName": "Private DNS Zone for workspace-specific mapping to OMS agents endpoints",
+        "strongType": "Microsoft.Network/privateDnsZones"
+      },
+      "type": "String"
+    },
+    "privateDnsZoneId3_437914ee-c176-4fff-8986-7e05eb971365": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "One of the five private DNS zone IDs required for Microsoft.Insights/privateLinkScopes to resolve a private DNS Zone to your Azure Monitor Private Link scope.",
+        "displayName": "Private DNS Zone for workspace-specific mapping to ingestion endpoints",
+        "strongType": "Microsoft.Network/privateDnsZones"
+      },
+      "type": "String"
+    },
+    "privateDnsZoneId4_437914ee-c176-4fff-8986-7e05eb971365": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "One of the five private DNS zone IDs required for Microsoft.Insights/privateLinkScopes to resolve a private DNS Zone.",
+        "displayName": "Private DNS Zone for workspace-specific mapping to the agent service automation endpoints",
+        "strongType": "Microsoft.Network/privateDnsZones"
+      },
+      "type": "String"
+    },
+    "privateDnsZoneId5_437914ee-c176-4fff-8986-7e05eb971365": {
+      "allowedValues": null,
+      "defaultValue": null,
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": true,
+        "description": "One of the five private DNS zone IDs required for Microsoft.Insights/privateLinkScopes to resolve a private DNS Zone.",
+        "displayName": "Private DNS Zone for connectivity to the global agent's solution packs storage account",
+        "strongType": "Microsoft.Network/privateDnsZones"
+      },
+      "type": "String"
+    },
+    "effect_6fc8115b-2008-441f-8c61-9b722c1e537f": {
+      "allowedValues": [
+        "deny",
+        "audit",
+        "disabled"
+      ],
+      "defaultValue": "audit",
+      "metadata": {
+        "additionalProperties": null,
+        "assignPermissions": null,
+        "description": "Audit, Deny, or Disable the execution of this policy",
+        "displayName": "Effect",
+        "strongType": null
+      },
+      "type": "String"
+    }
+  },
+  "functions": [],
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policySetDefinitions",
+      "apiVersion": "2020-09-01",
+      "name": "custom_shi_monitoring_initiative",
+      "properties": {
+        "policyType": "Custom",
+        "displayName": "Custom SHI monitoring initiative",
+        "description": "Custom SHI policy set including all policies under the monitoring category",
+        "policyDefinitions": [
+          {
+            "groupNames": null,
+            "Parameters": {
+              "listOfResourceTypes": {
+                "value": "[parameters('listOfResourceTypes_7f89b1eb-583c-429a-8828-af049802c1d9')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7f89b1eb-583c-429a-8828-af049802c1d9",
+            "policyDefinitionReferenceId": "custom_7f89b1eb-583c-429a-8828-af049802c1d9"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_0fc55270-f8bf-4feb-b7b8-5e7e7eacc6a6')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0fc55270-f8bf-4feb-b7b8-5e7e7eacc6a6",
+            "policyDefinitionReferenceId": "custom_0fc55270-f8bf-4feb-b7b8-5e7e7eacc6a6"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_1f68a601-6e6d-4e42-babf-3f643a047ea2')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1f68a601-6e6d-4e42-babf-3f643a047ea2",
+            "policyDefinitionReferenceId": "custom_1f68a601-6e6d-4e42-babf-3f643a047ea2"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "DcrResourceId": {
+                "value": "[parameters('DcrResourceId_2ea82cdd-f2e8-4500-af75-67a2e084ca74')]"
+              },
+              "effect": {
+                "value": "[parameters('effect_2ea82cdd-f2e8-4500-af75-67a2e084ca74')]"
+              },
+              "listOfLinuxImageIdToInclude": {
+                "value": "[parameters('listOfLinuxImageIdToInclude_2ea82cdd-f2e8-4500-af75-67a2e084ca74')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2ea82cdd-f2e8-4500-af75-67a2e084ca74",
+            "policyDefinitionReferenceId": "custom_2ea82cdd-f2e8-4500-af75-67a2e084ca74"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "DcrResourceId": {
+                "value": "[parameters('DcrResourceId_eab1f514-22e3-42e3-9a1f-e1dc9199355c')]"
+              },
+              "effect": {
+                "value": "[parameters('effect_eab1f514-22e3-42e3-9a1f-e1dc9199355c')]"
+              },
+              "listOfWindowsImageIdToInclude": {
+                "value": "[parameters('listOfWindowsImageIdToInclude_eab1f514-22e3-42e3-9a1f-e1dc9199355c')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/eab1f514-22e3-42e3-9a1f-e1dc9199355c",
+            "policyDefinitionReferenceId": "custom_eab1f514-22e3-42e3-9a1f-e1dc9199355c"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_a4034bc6-ae50-406d-bf76-50f4ee5a7811')]"
+              },
+              "listOfLinuxImageIdToInclude": {
+                "value": "[parameters('listOfLinuxImageIdToInclude_a4034bc6-ae50-406d-bf76-50f4ee5a7811')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4034bc6-ae50-406d-bf76-50f4ee5a7811",
+            "policyDefinitionReferenceId": "custom_a4034bc6-ae50-406d-bf76-50f4ee5a7811"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_ca817e41-e85a-4783-bc7f-dc532d36235e')]"
+              },
+              "listOfWindowsImageIdToInclude": {
+                "value": "[parameters('listOfWindowsImageIdToInclude_ca817e41-e85a-4783-bc7f-dc532d36235e')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ca817e41-e85a-4783-bc7f-dc532d36235e",
+            "policyDefinitionReferenceId": "custom_ca817e41-e85a-4783-bc7f-dc532d36235e"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "listOfImageIdToInclude": {
+                "value": "[parameters('listOfImageIdToInclude_765266ab-e40e-4c61-bcb2-5a5275d0b7c0')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/765266ab-e40e-4c61-bcb2-5a5275d0b7c0",
+            "policyDefinitionReferenceId": "custom_765266ab-e40e-4c61-bcb2-5a5275d0b7c0"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "listOfImageIdToInclude": {
+                "value": "[parameters('listOfImageIdToInclude_4da21710-ce6f-4e06-8cdb-5cc4c93ffbee')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4da21710-ce6f-4e06-8cdb-5cc4c93ffbee",
+            "policyDefinitionReferenceId": "custom_4da21710-ce6f-4e06-8cdb-5cc4c93ffbee"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_3be22e3b-d919-47aa-805e-8985dbeb0ad9')]"
+              },
+              "listOfImageIdToInclude": {
+                "value": "[parameters('listOfImageIdToInclude_3be22e3b-d919-47aa-805e-8985dbeb0ad9')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3be22e3b-d919-47aa-805e-8985dbeb0ad9",
+            "policyDefinitionReferenceId": "custom_3be22e3b-d919-47aa-805e-8985dbeb0ad9"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_1c210e94-a481-4beb-95fa-1571b434fb04')]"
+              },
+              "listOfImageIdToInclude": {
+                "value": "[parameters('listOfImageIdToInclude_1c210e94-a481-4beb-95fa-1571b434fb04')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1c210e94-a481-4beb-95fa-1571b434fb04",
+            "policyDefinitionReferenceId": "custom_1c210e94-a481-4beb-95fa-1571b434fb04"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "listOfImageIdToInclude": {
+                "value": "[parameters('listOfImageIdToInclude_5ee9e9ed-0b42-41b7-8c9c-3cfb2fbe2069')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_5ee9e9ed-0b42-41b7-8c9c-3cfb2fbe2069')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5ee9e9ed-0b42-41b7-8c9c-3cfb2fbe2069",
+            "policyDefinitionReferenceId": "custom_5ee9e9ed-0b42-41b7-8c9c-3cfb2fbe2069"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "listOfImageIdToInclude": {
+                "value": "[parameters('listOfImageIdToInclude_053d3325-282c-4e5c-b944-24faffd30d77')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_053d3325-282c-4e5c-b944-24faffd30d77')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/053d3325-282c-4e5c-b944-24faffd30d77",
+            "policyDefinitionReferenceId": "custom_053d3325-282c-4e5c-b944-24faffd30d77"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_3c1b3629-c8f8-4bf6-862c-037cb9094038')]"
+              },
+              "listOfImageIdToInclude": {
+                "value": "[parameters('listOfImageIdToInclude_3c1b3629-c8f8-4bf6-862c-037cb9094038')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_3c1b3629-c8f8-4bf6-862c-037cb9094038')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c1b3629-c8f8-4bf6-862c-037cb9094038",
+            "policyDefinitionReferenceId": "custom_3c1b3629-c8f8-4bf6-862c-037cb9094038"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_0868462e-646c-4fe3-9ced-a733534b6a2c')]"
+              },
+              "listOfImageIdToInclude": {
+                "value": "[parameters('listOfImageIdToInclude_0868462e-646c-4fe3-9ced-a733534b6a2c')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_0868462e-646c-4fe3-9ced-a733534b6a2c')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0868462e-646c-4fe3-9ced-a733534b6a2c",
+            "policyDefinitionReferenceId": "custom_0868462e-646c-4fe3-9ced-a733534b6a2c"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "automationAccountName": {
+                "value": "[parameters('automationAccountName_8e3e61b3-0b32-22d5-4edf-55f87fdb5955')]"
+              },
+              "automationRegion": {
+                "value": "[parameters('automationRegion_8e3e61b3-0b32-22d5-4edf-55f87fdb5955')]"
+              },
+              "dataRetention": {
+                "value": "[parameters('dataRetention_8e3e61b3-0b32-22d5-4edf-55f87fdb5955')]"
+              },
+              "effect": {
+                "value": "[parameters('effect_8e3e61b3-0b32-22d5-4edf-55f87fdb5955')]"
+              },
+              "rgName": {
+                "value": "[parameters('rgName_8e3e61b3-0b32-22d5-4edf-55f87fdb5955')]"
+              },
+              "sku": {
+                "value": "[parameters('sku_8e3e61b3-0b32-22d5-4edf-55f87fdb5955')]"
+              },
+              "workspaceName": {
+                "value": "[parameters('workspaceName_8e3e61b3-0b32-22d5-4edf-55f87fdb5955')]"
+              },
+              "workspaceRegion": {
+                "value": "[parameters('workspaceRegion_8e3e61b3-0b32-22d5-4edf-55f87fdb5955')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8e3e61b3-0b32-22d5-4edf-55f87fdb5955",
+            "policyDefinitionReferenceId": "custom_8e3e61b3-0b32-22d5-4edf-55f87fdb5955"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_2465583e-4e78-4c15-b6be-a36cbc7c8b0f')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_2465583e-4e78-4c15-b6be-a36cbc7c8b0f')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_2465583e-4e78-4c15-b6be-a36cbc7c8b0f')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2465583e-4e78-4c15-b6be-a36cbc7c8b0f",
+            "policyDefinitionReferenceId": "custom_2465583e-4e78-4c15-b6be-a36cbc7c8b0f"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_b3884c81-31aa-473d-a9bb-9466fe0ec2a0')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_b3884c81-31aa-473d-a9bb-9466fe0ec2a0')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_b3884c81-31aa-473d-a9bb-9466fe0ec2a0')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_b3884c81-31aa-473d-a9bb-9466fe0ec2a0')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_b3884c81-31aa-473d-a9bb-9466fe0ec2a0')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b3884c81-31aa-473d-a9bb-9466fe0ec2a0",
+            "policyDefinitionReferenceId": "custom_b3884c81-31aa-473d-a9bb-9466fe0ec2a0"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_db51110f-0865-4a6e-b274-e2e07a5b2cd7')]"
+              },
+              "eventHubLocation": {
+                "value": "[parameters('eventHubLocation_db51110f-0865-4a6e-b274-e2e07a5b2cd7')]"
+              },
+              "eventHubRuleId": {
+                "value": "[parameters('eventHubRuleId_db51110f-0865-4a6e-b274-e2e07a5b2cd7')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_db51110f-0865-4a6e-b274-e2e07a5b2cd7')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_db51110f-0865-4a6e-b274-e2e07a5b2cd7')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_db51110f-0865-4a6e-b274-e2e07a5b2cd7')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/db51110f-0865-4a6e-b274-e2e07a5b2cd7",
+            "policyDefinitionReferenceId": "custom_db51110f-0865-4a6e-b274-e2e07a5b2cd7"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_c84e5349-db6d-4769-805e-e14037dab9b5')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_c84e5349-db6d-4769-805e-e14037dab9b5')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_c84e5349-db6d-4769-805e-e14037dab9b5')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_c84e5349-db6d-4769-805e-e14037dab9b5')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_c84e5349-db6d-4769-805e-e14037dab9b5')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c84e5349-db6d-4769-805e-e14037dab9b5",
+            "policyDefinitionReferenceId": "custom_c84e5349-db6d-4769-805e-e14037dab9b5"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_4daddf25-4823-43d4-88eb-2419eb6dcc08')]"
+              },
+              "eventHubLocation": {
+                "value": "[parameters('eventHubLocation_4daddf25-4823-43d4-88eb-2419eb6dcc08')]"
+              },
+              "eventHubRuleId": {
+                "value": "[parameters('eventHubRuleId_4daddf25-4823-43d4-88eb-2419eb6dcc08')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_4daddf25-4823-43d4-88eb-2419eb6dcc08')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_4daddf25-4823-43d4-88eb-2419eb6dcc08')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_4daddf25-4823-43d4-88eb-2419eb6dcc08')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4daddf25-4823-43d4-88eb-2419eb6dcc08",
+            "policyDefinitionReferenceId": "custom_4daddf25-4823-43d4-88eb-2419eb6dcc08"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03",
+            "policyDefinitionReferenceId": "custom_d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d')]"
+              },
+              "eventHubLocation": {
+                "value": "[parameters('eventHubLocation_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d')]"
+              },
+              "eventHubRuleId": {
+                "value": "[parameters('eventHubRuleId_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8d096bc-85de-4c5f-8cfb-857bd1b9d62d",
+            "policyDefinitionReferenceId": "custom_e8d096bc-85de-4c5f-8cfb-857bd1b9d62d"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_25763a0a-5783-4f14-969e-79d4933eb74b')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_25763a0a-5783-4f14-969e-79d4933eb74b')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_25763a0a-5783-4f14-969e-79d4933eb74b')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_25763a0a-5783-4f14-969e-79d4933eb74b')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_25763a0a-5783-4f14-969e-79d4933eb74b')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/25763a0a-5783-4f14-969e-79d4933eb74b",
+            "policyDefinitionReferenceId": "custom_25763a0a-5783-4f14-969e-79d4933eb74b"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f')]"
+              },
+              "eventHubLocation": {
+                "value": "[parameters('eventHubLocation_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f')]"
+              },
+              "eventHubRuleId": {
+                "value": "[parameters('eventHubRuleId_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ef7b61ef-b8e4-4c91-8e78-6946c6b0023f",
+            "policyDefinitionReferenceId": "custom_ef7b61ef-b8e4-4c91-8e78-6946c6b0023f"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_1f6e93e8-6b31-41b1-83f6-36e449a42579')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_1f6e93e8-6b31-41b1-83f6-36e449a42579')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_1f6e93e8-6b31-41b1-83f6-36e449a42579')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_1f6e93e8-6b31-41b1-83f6-36e449a42579')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_1f6e93e8-6b31-41b1-83f6-36e449a42579')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1f6e93e8-6b31-41b1-83f6-36e449a42579",
+            "policyDefinitionReferenceId": "custom_1f6e93e8-6b31-41b1-83f6-36e449a42579"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_bef3f64c-5290-43b7-85b0-9b254eef4c47')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_bef3f64c-5290-43b7-85b0-9b254eef4c47')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_bef3f64c-5290-43b7-85b0-9b254eef4c47')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_bef3f64c-5290-43b7-85b0-9b254eef4c47')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_bef3f64c-5290-43b7-85b0-9b254eef4c47')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bef3f64c-5290-43b7-85b0-9b254eef4c47",
+            "policyDefinitionReferenceId": "custom_bef3f64c-5290-43b7-85b0-9b254eef4c47"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_a1dae6c7-13f3-48ea-a149-ff8442661f60')]"
+              },
+              "eventHubLocation": {
+                "value": "[parameters('eventHubLocation_a1dae6c7-13f3-48ea-a149-ff8442661f60')]"
+              },
+              "eventHubRuleId": {
+                "value": "[parameters('eventHubRuleId_a1dae6c7-13f3-48ea-a149-ff8442661f60')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_a1dae6c7-13f3-48ea-a149-ff8442661f60')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_a1dae6c7-13f3-48ea-a149-ff8442661f60')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_a1dae6c7-13f3-48ea-a149-ff8442661f60')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a1dae6c7-13f3-48ea-a149-ff8442661f60",
+            "policyDefinitionReferenceId": "custom_a1dae6c7-13f3-48ea-a149-ff8442661f60"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_b889a06c-ec72-4b03-910a-cb169ee18721')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_b889a06c-ec72-4b03-910a-cb169ee18721')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_b889a06c-ec72-4b03-910a-cb169ee18721')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_b889a06c-ec72-4b03-910a-cb169ee18721')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_b889a06c-ec72-4b03-910a-cb169ee18721')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b889a06c-ec72-4b03-910a-cb169ee18721",
+            "policyDefinitionReferenceId": "custom_b889a06c-ec72-4b03-910a-cb169ee18721"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_3d5da587-71bd-41f5-ac95-dd3330c2d58d')]"
+              },
+              "eventHubLocation": {
+                "value": "[parameters('eventHubLocation_3d5da587-71bd-41f5-ac95-dd3330c2d58d')]"
+              },
+              "eventHubRuleId": {
+                "value": "[parameters('eventHubRuleId_3d5da587-71bd-41f5-ac95-dd3330c2d58d')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_3d5da587-71bd-41f5-ac95-dd3330c2d58d')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_3d5da587-71bd-41f5-ac95-dd3330c2d58d')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_3d5da587-71bd-41f5-ac95-dd3330c2d58d')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3d5da587-71bd-41f5-ac95-dd3330c2d58d",
+            "policyDefinitionReferenceId": "custom_3d5da587-71bd-41f5-ac95-dd3330c2d58d"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_08ba64b8-738f-4918-9686-730d2ed79c7d')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_08ba64b8-738f-4918-9686-730d2ed79c7d')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_08ba64b8-738f-4918-9686-730d2ed79c7d')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_08ba64b8-738f-4918-9686-730d2ed79c7d')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_08ba64b8-738f-4918-9686-730d2ed79c7d')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08ba64b8-738f-4918-9686-730d2ed79c7d",
+            "policyDefinitionReferenceId": "custom_08ba64b8-738f-4918-9686-730d2ed79c7d"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_6b51af03-9277-49a9-a3f8-1c69c9ff7403')]"
+              },
+              "eventHubLocation": {
+                "value": "[parameters('eventHubLocation_6b51af03-9277-49a9-a3f8-1c69c9ff7403')]"
+              },
+              "eventHubRuleId": {
+                "value": "[parameters('eventHubRuleId_6b51af03-9277-49a9-a3f8-1c69c9ff7403')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_6b51af03-9277-49a9-a3f8-1c69c9ff7403')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_6b51af03-9277-49a9-a3f8-1c69c9ff7403')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_6b51af03-9277-49a9-a3f8-1c69c9ff7403')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b51af03-9277-49a9-a3f8-1c69c9ff7403",
+            "policyDefinitionReferenceId": "custom_6b51af03-9277-49a9-a3f8-1c69c9ff7403"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_04d53d87-841c-4f23-8a5b-21564380b55e')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_04d53d87-841c-4f23-8a5b-21564380b55e')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_04d53d87-841c-4f23-8a5b-21564380b55e')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_04d53d87-841c-4f23-8a5b-21564380b55e')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_04d53d87-841c-4f23-8a5b-21564380b55e')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/04d53d87-841c-4f23-8a5b-21564380b55e",
+            "policyDefinitionReferenceId": "custom_04d53d87-841c-4f23-8a5b-21564380b55e"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_edf3780c-3d70-40fe-b17e-ab72013dafca')]"
+              },
+              "eventHubLocation": {
+                "value": "[parameters('eventHubLocation_edf3780c-3d70-40fe-b17e-ab72013dafca')]"
+              },
+              "eventHubRuleId": {
+                "value": "[parameters('eventHubRuleId_edf3780c-3d70-40fe-b17e-ab72013dafca')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_edf3780c-3d70-40fe-b17e-ab72013dafca')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_edf3780c-3d70-40fe-b17e-ab72013dafca')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_edf3780c-3d70-40fe-b17e-ab72013dafca')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/edf3780c-3d70-40fe-b17e-ab72013dafca",
+            "policyDefinitionReferenceId": "custom_edf3780c-3d70-40fe-b17e-ab72013dafca"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_237e0f7e-b0e8-4ec4-ad46-8c12cb66d673')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_237e0f7e-b0e8-4ec4-ad46-8c12cb66d673')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_237e0f7e-b0e8-4ec4-ad46-8c12cb66d673')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_237e0f7e-b0e8-4ec4-ad46-8c12cb66d673')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_237e0f7e-b0e8-4ec4-ad46-8c12cb66d673')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/237e0f7e-b0e8-4ec4-ad46-8c12cb66d673",
+            "policyDefinitionReferenceId": "custom_237e0f7e-b0e8-4ec4-ad46-8c12cb66d673"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_dddfa1af-dcd6-42f4-b5b0-e1db01e0b405')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/dddfa1af-dcd6-42f4-b5b0-e1db01e0b405",
+            "policyDefinitionReferenceId": "custom_dddfa1af-dcd6-42f4-b5b0-e1db01e0b405"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_752154a7-1e0f-45c6-a880-ac75a7e4f648')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_752154a7-1e0f-45c6-a880-ac75a7e4f648')]"
+              },
+              "logsEnabled": {
+                "value": "[parameters('logsEnabled_752154a7-1e0f-45c6-a880-ac75a7e4f648')]"
+              },
+              "metricsEnabled": {
+                "value": "[parameters('metricsEnabled_752154a7-1e0f-45c6-a880-ac75a7e4f648')]"
+              },
+              "profileName": {
+                "value": "[parameters('profileName_752154a7-1e0f-45c6-a880-ac75a7e4f648')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/752154a7-1e0f-45c6-a880-ac75a7e4f648",
+            "policyDefinitionReferenceId": "custom_752154a7-1e0f-45c6-a880-ac75a7e4f648"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_deacecc0-9f84-44d2-bb82-46f32d766d43')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/deacecc0-9f84-44d2-bb82-46f32d766d43",
+            "policyDefinitionReferenceId": "custom_deacecc0-9f84-44d2-bb82-46f32d766d43"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_91cb9edd-cd92-4d2f-b2f2-bdd8d065a3d4')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/91cb9edd-cd92-4d2f-b2f2-bdd8d065a3d4",
+            "policyDefinitionReferenceId": "custom_91cb9edd-cd92-4d2f-b2f2-bdd8d065a3d4"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_9d2b61b4-1d14-4a63-be30-d4498e7ad2cf')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_9d2b61b4-1d14-4a63-be30-d4498e7ad2cf')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9d2b61b4-1d14-4a63-be30-d4498e7ad2cf",
+            "policyDefinitionReferenceId": "custom_9d2b61b4-1d14-4a63-be30-d4498e7ad2cf"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_69af7d4a-7b18-4044-93a9-2651498ef203')]"
+              },
+              "logAnalytics": {
+                "value": "[parameters('logAnalytics_69af7d4a-7b18-4044-93a9-2651498ef203')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/69af7d4a-7b18-4044-93a9-2651498ef203",
+            "policyDefinitionReferenceId": "custom_69af7d4a-7b18-4044-93a9-2651498ef203"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_199d5677-e4d9-4264-9465-efe1839c06bd')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/199d5677-e4d9-4264-9465-efe1839c06bd",
+            "policyDefinitionReferenceId": "custom_199d5677-e4d9-4264-9465-efe1839c06bd"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_e15effd4-2278-4c65-a0da-4d6f6d1890e2')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e15effd4-2278-4c65-a0da-4d6f6d1890e2",
+            "policyDefinitionReferenceId": "custom_e15effd4-2278-4c65-a0da-4d6f6d1890e2"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_94c1f94d-33b0-4062-bd04-1cdc3e7eece2')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94c1f94d-33b0-4062-bd04-1cdc3e7eece2",
+            "policyDefinitionReferenceId": "custom_94c1f94d-33b0-4062-bd04-1cdc3e7eece2"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_1bc02227-0cb6-4e11-8f53-eb0b22eab7e8')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1bc02227-0cb6-4e11-8f53-eb0b22eab7e8",
+            "policyDefinitionReferenceId": "custom_1bc02227-0cb6-4e11-8f53-eb0b22eab7e8"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_d3ba9c42-9dd5-441a-957c-274031c750c0')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d3ba9c42-9dd5-441a-957c-274031c750c0",
+            "policyDefinitionReferenceId": "custom_d3ba9c42-9dd5-441a-957c-274031c750c0"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_6c53d030-cc64-46f0-906d-2bc061cd1334')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6c53d030-cc64-46f0-906d-2bc061cd1334",
+            "policyDefinitionReferenceId": "custom_6c53d030-cc64-46f0-906d-2bc061cd1334"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_fa298e57-9444-42ba-bf04-86e8470e32c7')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fa298e57-9444-42ba-bf04-86e8470e32c7",
+            "policyDefinitionReferenceId": "custom_fa298e57-9444-42ba-bf04-86e8470e32c7"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_d550e854-df1a-4de9-bf44-cd894b39a95e')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d550e854-df1a-4de9-bf44-cd894b39a95e",
+            "policyDefinitionReferenceId": "custom_d550e854-df1a-4de9-bf44-cd894b39a95e"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_e8185402-357b-4768-8058-f620bc0ae6b5')]"
+              },
+              "privateEndpointSubnetId": {
+                "value": "[parameters('privateEndpointSubnetId_e8185402-357b-4768-8058-f620bc0ae6b5')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8185402-357b-4768-8058-f620bc0ae6b5",
+            "policyDefinitionReferenceId": "custom_e8185402-357b-4768-8058-f620bc0ae6b5"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_5c3bc7b8-a64c-4e08-a9cd-7ff0f31e1138')]"
+              },
+              "listOfImageIdToInclude_linux": {
+                "value": "[parameters('listOfImageIdToInclude_linux_5c3bc7b8-a64c-4e08-a9cd-7ff0f31e1138')]"
+              },
+              "listOfImageIdToInclude_windows": {
+                "value": "[parameters('listOfImageIdToInclude_windows_5c3bc7b8-a64c-4e08-a9cd-7ff0f31e1138')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c3bc7b8-a64c-4e08-a9cd-7ff0f31e1138",
+            "policyDefinitionReferenceId": "custom_5c3bc7b8-a64c-4e08-a9cd-7ff0f31e1138"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_e2dd799a-a932-4e9d-ac17-d473bc3c6c10')]"
+              },
+              "listOfImageIdToInclude_linux": {
+                "value": "[parameters('listOfImageIdToInclude_linux_e2dd799a-a932-4e9d-ac17-d473bc3c6c10')]"
+              },
+              "listOfImageIdToInclude_windows": {
+                "value": "[parameters('listOfImageIdToInclude_windows_e2dd799a-a932-4e9d-ac17-d473bc3c6c10')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e2dd799a-a932-4e9d-ac17-d473bc3c6c10",
+            "policyDefinitionReferenceId": "custom_e2dd799a-a932-4e9d-ac17-d473bc3c6c10"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_11ac78e3-31bc-4f0c-8434-37ab963cea07')]"
+              },
+              "listOfImageIdToInclude_linux": {
+                "value": "[parameters('listOfImageIdToInclude_linux_11ac78e3-31bc-4f0c-8434-37ab963cea07')]"
+              },
+              "listOfImageIdToInclude_windows": {
+                "value": "[parameters('listOfImageIdToInclude_windows_11ac78e3-31bc-4f0c-8434-37ab963cea07')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/11ac78e3-31bc-4f0c-8434-37ab963cea07",
+            "policyDefinitionReferenceId": "custom_11ac78e3-31bc-4f0c-8434-37ab963cea07"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_f47b5582-33ec-4c5c-87c0-b010a6b2e917')]"
+              },
+              "logAnalyticsWorkspaceId": {
+                "value": "[parameters('logAnalyticsWorkspaceId_f47b5582-33ec-4c5c-87c0-b010a6b2e917')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f47b5582-33ec-4c5c-87c0-b010a6b2e917",
+            "policyDefinitionReferenceId": "custom_f47b5582-33ec-4c5c-87c0-b010a6b2e917"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_efbde977-ba53-4479-b8e9-10b957924fbf')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/efbde977-ba53-4479-b8e9-10b957924fbf",
+            "policyDefinitionReferenceId": "custom_efbde977-ba53-4479-b8e9-10b957924fbf"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_a70ca396-0a34-413a-88e1-b956c1e683be')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a70ca396-0a34-413a-88e1-b956c1e683be",
+            "policyDefinitionReferenceId": "custom_a70ca396-0a34-413a-88e1-b956c1e683be"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_fbb99e8e-e444-4da0-9ff1-75c92f5a85b2')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fbb99e8e-e444-4da0-9ff1-75c92f5a85b2",
+            "policyDefinitionReferenceId": "custom_fbb99e8e-e444-4da0-9ff1-75c92f5a85b2"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_b954148f-4c11-4c38-8221-be76711e194a')]"
+              },
+              "operationName": {
+                "value": "[parameters('operationName_b954148f-4c11-4c38-8221-be76711e194a')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b954148f-4c11-4c38-8221-be76711e194a",
+            "policyDefinitionReferenceId": "custom_b954148f-4c11-4c38-8221-be76711e194a"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_c5447c04-a4d7-4ba8-a263-c9ee321a6858')]"
+              },
+              "operationName": {
+                "value": "[parameters('operationName_c5447c04-a4d7-4ba8-a263-c9ee321a6858')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c5447c04-a4d7-4ba8-a263-c9ee321a6858",
+            "policyDefinitionReferenceId": "custom_c5447c04-a4d7-4ba8-a263-c9ee321a6858"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_3b980d31-7904-4bb7-8575-5665739a8052')]"
+              },
+              "operationName": {
+                "value": "[parameters('operationName_3b980d31-7904-4bb7-8575-5665739a8052')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3b980d31-7904-4bb7-8575-5665739a8052",
+            "policyDefinitionReferenceId": "custom_3b980d31-7904-4bb7-8575-5665739a8052"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_b02aacc0-b073-424e-8298-42b22829ee0a')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b02aacc0-b073-424e-8298-42b22829ee0a",
+            "policyDefinitionReferenceId": "custom_b02aacc0-b073-424e-8298-42b22829ee0a"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_41388f1c-2db0-4c25-95b2-35d7f5ccbfa9')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/41388f1c-2db0-4c25-95b2-35d7f5ccbfa9",
+            "policyDefinitionReferenceId": "custom_41388f1c-2db0-4c25-95b2-35d7f5ccbfa9"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "rgName": {
+                "value": "[parameters('rgName_c9c29499-c1d1-4195-99bd-2ec9e3a9dc89')]"
+              },
+              "storagePrefix": {
+                "value": "[parameters('storagePrefix_c9c29499-c1d1-4195-99bd-2ec9e3a9dc89')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c9c29499-c1d1-4195-99bd-2ec9e3a9dc89",
+            "policyDefinitionReferenceId": "custom_c9c29499-c1d1-4195-99bd-2ec9e3a9dc89"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_7796937f-307b-4598-941c-67d3a05ebfe7')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7796937f-307b-4598-941c-67d3a05ebfe7",
+            "policyDefinitionReferenceId": "custom_7796937f-307b-4598-941c-67d3a05ebfe7"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_1a4e592a-6a6e-44a5-9814-e36264ca96e7')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1a4e592a-6a6e-44a5-9814-e36264ca96e7",
+            "policyDefinitionReferenceId": "custom_1a4e592a-6a6e-44a5-9814-e36264ca96e7"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_3e596b57-105f-48a6-be97-03e9243bad6e')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3e596b57-105f-48a6-be97-03e9243bad6e",
+            "policyDefinitionReferenceId": "custom_3e596b57-105f-48a6-be97-03e9243bad6e"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_ea0dfaed-95fb-448c-934e-d6e713ce393d')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ea0dfaed-95fb-448c-934e-d6e713ce393d",
+            "policyDefinitionReferenceId": "custom_ea0dfaed-95fb-448c-934e-d6e713ce393d"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_0c4bd2e8-8872-4f37-a654-03f6f38ddc76')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0c4bd2e8-8872-4f37-a654-03f6f38ddc76",
+            "policyDefinitionReferenceId": "custom_0c4bd2e8-8872-4f37-a654-03f6f38ddc76"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_437914ee-c176-4fff-8986-7e05eb971365')]"
+              },
+              "privateDnsZoneId1": {
+                "value": "[parameters('privateDnsZoneId1_437914ee-c176-4fff-8986-7e05eb971365')]"
+              },
+              "privateDnsZoneId2": {
+                "value": "[parameters('privateDnsZoneId2_437914ee-c176-4fff-8986-7e05eb971365')]"
+              },
+              "privateDnsZoneId3": {
+                "value": "[parameters('privateDnsZoneId3_437914ee-c176-4fff-8986-7e05eb971365')]"
+              },
+              "privateDnsZoneId4": {
+                "value": "[parameters('privateDnsZoneId4_437914ee-c176-4fff-8986-7e05eb971365')]"
+              },
+              "privateDnsZoneId5": {
+                "value": "[parameters('privateDnsZoneId5_437914ee-c176-4fff-8986-7e05eb971365')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/437914ee-c176-4fff-8986-7e05eb971365",
+            "policyDefinitionReferenceId": "custom_437914ee-c176-4fff-8986-7e05eb971365"
+          },
+          {
+            "groupNames": null,
+            "Parameters": {
+              "effect": {
+                "value": "[parameters('effect_6fc8115b-2008-441f-8c61-9b722c1e537f')]"
+              }
+            },
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6fc8115b-2008-441f-8c61-9b722c1e537f",
+            "policyDefinitionReferenceId": "custom_6fc8115b-2008-441f-8c61-9b722c1e537f"
+          }
+        ]
+      }
+    }
+  ]
+}
